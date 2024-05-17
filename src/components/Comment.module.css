@@ -4,13 +4,6 @@
     gap: 1rem
 }
 
-.comment > img {
-    box-sizing: initial;/* ocupa um espaço a mais,sem comprimir o elemento */
-    width: 3rem; /* calc(3rem + 12px)*/
-    height: 3rem; /* calc(3rem + 12px)*/
-    border-radius: 8px;
-}
-
 .commentBox{
      flex: 1; /* faz a div esticar o maximo possivel do tamanho */
 }
