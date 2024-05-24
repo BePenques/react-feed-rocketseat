@@ -11,7 +11,20 @@ export function Comment({content, onDeleteComment}) {
         onDeleteComment(content)
     }
     function handleLikeComment(){
-        setLikeCount(likeCount+1)
+        // setLikeCount(likeCount+1)
+
+        // solução 1 - atualizar de 2 em 2
+        /* const newLikeCount = likeCount + 1;
+           setLikeCount(newLikeCount)
+           setLikeCount(newLikeCount+1) */
+        // solução 2 
+        setLikeCount((state)=>{//state - valor +recente de likeCount
+            return state + 1
+        });
+
+        /* Sempre que for atualizar uma informação que 
+           depende de seu proprio valor anterior,
+           use este padrão de funções*/
     }
     return (
         <div className={styles.comment}>
